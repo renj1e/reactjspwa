@@ -17,7 +17,24 @@ Notification.requestPermission(result => {
       navigator.serviceWorker.ready.then(registration => {
         registration.showNotification('Vibration Sample', {
           body: 'Buzz! Buzz!',
-          tag: 'vibration-sample'
+          tag: 'vibration-sample',
+					vibrate: [100, 50, 100],
+					data: {
+						dateOfArrival: Date.now(),
+						primaryKey: 1
+					},
+					actions: [
+						{
+							action: 'explore',
+							title: 'Explore this new world',
+							icon: 'images/checkmark.png'
+						},
+						{
+							action: 'close',
+							title: 'Close notification',
+							icon: 'images/xmark.png'
+						},
+					]
         })
       })
     }
