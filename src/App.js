@@ -2,6 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+Notification.requestPermission(result => {
+  if (result === 'granted') {
+
+    if ('Notification' in window) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.showNotification('Vibration Sample', {
+          body: 'Buzz! Buzz!',
+          tag: 'vibration-sample'
+        })
+      })
+    }
+
+  }
+})
 function App() {
   return (
     <div className="App">

@@ -10,17 +10,3 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register();
-Notification.requestPermission(result => {
-  if (result === 'granted') {
-
-    if ('Notification' in window) {
-      navigator.serviceWorker.ready.then(registration => {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          tag: 'vibration-sample'
-        })
-      })
-    }
-
-  }
-})
