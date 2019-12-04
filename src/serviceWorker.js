@@ -9,7 +9,32 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
-
+window.onload=function(){
+var self = this;
+self.addEventListener('push', event => {
+  self.registration.showNotification('Vibration Sample', {
+    body: 'Buzz! Buzz!',
+    tag: 'vibration-sample',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore this new world',
+        icon: 'images/checkmark.png'
+      },
+      {
+        action: 'close',
+        title: 'Close notification',
+        icon: 'images/xmark.png'
+      },
+    ]
+  });
+});
+}
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
