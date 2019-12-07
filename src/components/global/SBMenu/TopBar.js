@@ -29,22 +29,22 @@ function TopBar() {
               <a
                 className="nav-link dropdown-toggle waves-effect waves-light"
                 data-toggle="dropdown"
-                href="#"
+                href="/"
                 role="button"
                 aria-haspopup="false"
                 aria-expanded="false"
               >
-                English{" "}
+                English
                 <img
                   src="/assets/images/flags/us_flag.jpg"
                   className="ml-2"
                   height="16"
                   alt=""
-                />{" "}
+                />
                 <i className="mdi mdi-chevron-down"></i>
               </a>
               <div className="dropdown-menu dropdown-menu-right">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <span>German </span>
                   <img
                     src="/assets/images/flags/germany_flag.jpg"
@@ -53,7 +53,7 @@ function TopBar() {
                     height="14"
                   />
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <span>Italian </span>
                   <img
                     src="/assets/images/flags/italy_flag.jpg"
@@ -62,7 +62,7 @@ function TopBar() {
                     height="14"
                   />
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <span>French </span>
                   <img
                     src="/assets/images/flags/french_flag.jpg"
@@ -71,7 +71,7 @@ function TopBar() {
                     height="14"
                   />
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <span>Spanish </span>
                   <img
                     src="/assets/images/flags/spain_flag.jpg"
@@ -80,7 +80,7 @@ function TopBar() {
                     height="14"
                   />
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <span>Russian </span>
                   <img
                     src="/assets/images/flags/russia_flag.jpg"
@@ -95,12 +95,12 @@ function TopBar() {
               <a
                 className="nav-link dropdown-toggle arrow-none waves-light waves-effect"
                 data-toggle="dropdown"
-                href="#"
+                href="/"
                 role="button"
                 aria-haspopup="false"
                 aria-expanded="false"
               >
-                <i className="dripicons-bell noti-icon"></i>{" "}
+                <i className="dripicons-bell noti-icon"></i>
                 <span className="badge badge-danger badge-pill noti-icon-badge">
                   2
                 </span>
@@ -108,7 +108,7 @@ function TopBar() {
               <div className="dropdown-menu dropdown-menu-right dropdown-lg">
                 <h6 className="dropdown-item-text">Notifications (18)</h6>
                 <div className="slimscroll notification-list">
-                  <a href="#" className="dropdown-item notify-item active">
+                  <a href="/" className="dropdown-item notify-item active">
                     <div className="notify-icon bg-success">
                       <i className="mdi mdi-cart-outline"></i>
                     </div>
@@ -119,7 +119,7 @@ function TopBar() {
                       </small>
                     </p>
                   </a>
-                  <a href="#" className="dropdown-item notify-item">
+                  <a href="/" className="dropdown-item notify-item">
                     <div className="notify-icon bg-warning">
                       <i className="mdi mdi-message"></i>
                     </div>
@@ -130,7 +130,7 @@ function TopBar() {
                       </small>
                     </p>
                   </a>
-                  <a href="#" className="dropdown-item notify-item">
+                  <a href="/" className="dropdown-item notify-item">
                     <div className="notify-icon bg-info">
                       <i className="mdi mdi-glass-cocktail"></i>
                     </div>
@@ -141,7 +141,7 @@ function TopBar() {
                       </small>
                     </p>
                   </a>
-                  <a href="#" className="dropdown-item notify-item">
+                  <a href="/" className="dropdown-item notify-item">
                     <div className="notify-icon bg-primary">
                       <i className="mdi mdi-cart-outline"></i>
                     </div>
@@ -152,7 +152,7 @@ function TopBar() {
                       </small>
                     </p>
                   </a>
-                  <a href="#" className="dropdown-item notify-item">
+                  <a href="/" className="dropdown-item notify-item">
                     <div className="notify-icon bg-danger">
                       <i className="mdi mdi-message"></i>
                     </div>
@@ -164,7 +164,7 @@ function TopBar() {
                     </p>
                   </a>
                 </div>
-                <a href="#" className="dropdown-item text-center text-primary">
+                <a href="/" className="dropdown-item text-center text-primary">
                   View all <i className="fi-arrow-right"></i>
                 </a>
               </div>
@@ -173,7 +173,7 @@ function TopBar() {
               <a
                 className="nav-link dropdown-toggle waves-effect waves-light nav-user"
                 data-toggle="dropdown"
-                href="#"
+                href="/"
                 role="button"
                 aria-haspopup="false"
                 aria-expanded="false"
@@ -182,26 +182,26 @@ function TopBar() {
                   src="/assets/images/users/user-4.jpg"
                   alt="profile-user"
                   className="rounded-circle"
-                />{" "}
+                />
                 <span className="ml-1 nav-user-name hidden-sm">
                   Amelia <i className="mdi mdi-chevron-down"></i>
                 </span>
               </a>
               <div className="dropdown-menu dropdown-menu-right">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <i className="dripicons-user text-muted mr-2"></i> Profile
-                </a>{" "}
-                <a className="dropdown-item" href="#">
+                </a>
+                <a className="dropdown-item" href="/">
                   <i className="dripicons-wallet text-muted mr-2"></i> My Wallet
-                </a>{" "}
-                <a className="dropdown-item" href="#">
+                </a>
+                <a className="dropdown-item" href="/">
                   <i className="dripicons-gear text-muted mr-2"></i> Settings
-                </a>{" "}
-                <a className="dropdown-item" href="#">
+                </a>
+                <a className="dropdown-item" href="/">
                   <i className="dripicons-lock text-muted mr-2"></i> Lock screen
                 </a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   <i className="dripicons-exit text-muted mr-2"></i> Logout
                 </a>
               </div>
@@ -219,8 +219,8 @@ function TopBar() {
                   type="text"
                   placeholder="Search..."
                   className="form-control"
-                />{" "}
-                <a href="">
+                />
+                <a href="/">
                   <i className="fas fa-search"></i>
                 </a>
               </form>

@@ -10,31 +10,31 @@ import ACustomers from "./views/Analytics/Customers";
 import AReports from "./views/Analytics/Reports";
 
 import Crypto from "./views/Crypto";
-import Menu from "./components/global/SBMenu/_menu"
 
 const routes = [
   {
-    path: "/analytics/dashboard",
-    component: ADashboard
+    path: "/crypto",
+    component: Crypto,
+    routes: []
   },
   {
     path: "/analytics/customers",
-    component: ACustomers
+    component: ACustomers,
+    routes: []
   },
   {
     path: "/analytics/reports",
-    component: AReports
+    component: AReports,
+    routes: []
   },
   {
-    path: "/crypto",
-    component: Crypto
+    path: "/analytics/dashboard",
+    component: ADashboard,
+    routes: []
   }
 ];
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div className="App">
