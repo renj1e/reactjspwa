@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import TopBar from "./components/global/SBMenu/TopBar";
+import LSBar from "./components/global/SBMenu/LSBar";
+
+import ADashboard from "./views/Analytics/Dashboard";
+import ACustomers from "./views/Analytics/Customers";
+import AReports from "./views/Analytics/Reports";
+
+import Crypto from "./views/Crypto";
+import Menu from "./components/global/SBMenu/_menu"
+
+const routes = [
+  {
+    path: "/analytics/dashboard",
+    component: ADashboard
+  },
+  {
+    path: "/analytics/customers",
+    component: ACustomers
+  },
+  {
+    path: "/analytics/reports",
+    component: AReports
+  },
+  {
+    path: "/crypto",
+    component: Crypto
+  }
+];
+
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="App">
+        <TopBar />
+        <div className="page-wrapper">
+          <Router>
+            <LSBar {...this.props} />
+            <div className="page-content">
+            <Switch>
+              {routes.map((route, i) => (
+                <Route key={i}
+                  path={route.path}
+                  render={props => (
+                    // pass the sub-routes down to keep nesting
+                    <route.component {...props} routes={route.routes} />
+                  )}
+                />
+              ))}
+            </Switch>
+            </div>
+          </Router>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
